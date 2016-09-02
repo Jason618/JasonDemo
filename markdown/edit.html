@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>markdown 在线编辑器</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <style>
+        .main{
+            margin: 1em auto;
+            max-width: 60em;
+        }
+        .content .header{
+            text-align: center;
+        }
+        .content form textarea{
+            width: 100%;
+            min-height: 30em;
+        }
+    </style>
+</head>
+<body>
+    <div class="main pure-g">
+        <header></header>
+        <div class="content pure-u-1">
+            <h1 class="header">文章编辑器,<strong>Markdonw</strong>语法编辑</h1>
+            <form method="post" action="index.html">
+                <textarea id="text-input" oninput="this.editor.update()">
+                Type **Markdown** here.
+#标题
+#hello input
+## hello input
+###hello input
+#### hello input
+##### hello input
+###### hello input
+#段落
+> 这是一个段落 hello input
+>> 这是嵌套段落
+>>> 这是嵌套段落
+>
+>>> 这是嵌套段落
+>
+> 这是一个段落  helle world
+#列表
+* red
+* greed
+* yellow
+
+1. red
+2. green
+3. yellow
+
+#代码
+>4个空格表示代码
+
+    var test = document.getElementById("container");
+    var fun = function(){
+        console.info('hello world');
+    }
+
+#分割线
+
+***
+___
+----
+
+#链接
+
+this is [an example](http://baidu.com/ 'title') inline link.
+
+#强调
+*强调*
+
+#行内代码
+use the `printf()` function
+
+#图片
+![Alt text](/path/to/img.jpg "Optional title")
+
+#自动链接
+<http://baidu.com>
+#反斜杠
+\[]
+\+
+\-
+                </textarea>
+            </form>
+        </div>
+        <div id="preview" class="pure-u-1"></div>
+    </div>
+<pre>
+       Type **Markdown** here.
+#标题
+#hello input
+## hello input
+###hello input
+#### hello input
+##### hello input
+###### hello input
+#段落
+> 这是一个段落 hello input
+>> 这是嵌套段落
+>>> 这是嵌套段落
+>
+>>> 这是嵌套段落
+>
+> 这是一个段落  helle world
+#列表
+* red
+* greed
+* yellow
+
+1. red
+2. green
+3. yellow
+
+#代码
+>4个空格表示代码
+
+    var test = document.getElementById("container");
+    var fun = function(){
+        console.info('hello world');
+    }
+
+#分割线
+
+***
+___
+----
+
+#链接
+
+this is [an example](http://baidu.com/ 'title') inline link.
+
+#强调
+*强调*
+
+#行内代码
+use the `printf()` function
+
+#图片
+![Alt text](/path/to/img.jpg "Optional title")
+
+#自动链接
+<http://baidu.com>
+#反斜杠
+\[]
+\+
+\-
+
+
+</pre>
+
+<script src="lib/markdown.js"></script>
+<script>
+    function Editor(input, preview) {
+        this.update = function () {
+            preview.innerHTML = Markdown.toHTML(input.value);
+        };
+        input.editor = this;
+        this.update();
+    }
+    var $ = function (id) {
+        return document.getElementById(id);
+    };
+    var editor = new Editor($("text-input"), $("preview"));
+</script>
+
+</body>
+</html>

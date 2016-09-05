@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="main">
+    <section class="demo">
+        <h1>demo1 data bind</h1>
+        <div id="demo1">
+            <p>{{ message }}</p>
+            <input v-model="message" number>
+        </div>
+    </section>
+    <section class="demo">
+        <h1>for</h1>
+        <div id="demo2">
+            <ul>
+                <li v-for="todo in todos">
+                    {{ todo.message }}
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="demo">
+        <h1>handle event</h1>
+        <div id="demo3">
+            <input v-model="newMessage" v-on:keyup.enter="addTodo">
+            <ul>
+                <li v-for="todo in todos">
+                    {{ todo.message }}
+                    <button v-on:click="removeItem($index)">X</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<!--<script src="lib/vue.common.js"></script>-->
+<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#demo1',
+        data: {
+            message: 'Hello Vue.js!'
+        },
+        created:function () {
+            console.info('vue instance create');
+        },
+        compiled:function () {
+            console.info('vm install compiled');
+        },
+        ready: function () {
+            console.info('vm instanll ready');
+        },
+        destroyed:function () {
+            console.info('vm instance destroyed');
+        }
+    });
+    new Vue({
+        el: '#demo2',
+        data: {
+            todos:[
+                {message:"list1"},
+                {message:"list2"},
+                {message:"list3"}
+            ]
+        }
+    });
+    new Vue({
+        el: '#demo3',
+        data: {
+            newMessage: "",
+            todos:[
+                {message:"list1"},
+                {message:"list2"},
+                {message:"list3"}
+            ]
+        },
+        methods: {
+            addTodo: function () {
+                console.info(this);
+                var text = this.newMessage.trim();
+                if(text){
+                    this.todos.push({message:text});
+                    this.newMessage = '';
+                }
+            },
+            removeItem: function (index) {
+                console.info(this);
+                this.todos.splice(index,1);
+            }
+        }
+    });
+</script>
+</body>
+</html>

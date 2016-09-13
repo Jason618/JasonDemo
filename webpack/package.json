@@ -1,0 +1,23 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "webpack demo",
+  "main": "index.js",
+  "dependencies": {
+    "css-loader": "^0.25.0"
+  },
+  "devDependencies": {
+    "style-loader": "^0.13.1",
+    "uglify-loader": "^1.3.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "webpack",
+    "demo"
+  ],
+  "repository": "git@github.com:Jason618/JasonDemo.git",
+  "author": "Jason",
+  "license": "ISC"
+}

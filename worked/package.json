@@ -1,0 +1,30 @@
+{
+  "name": "worked",
+  "version": "1.0.0",
+  "description": "record my working",
+  "main": "index.js",
+  "scripts": {
+    "test": "dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jason618/JasonDemo.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "javascript",
+    "vuejs",
+    "webpack",
+    "nodejs",
+    "sass",
+    "rem",
+    "build"
+  ],
+  "author": "Jason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jason618/JasonDemo/issues"
+  },
+  "homepage": "https://github.com/Jason618/JasonDemo#readme"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "h5-node-vue",
+  "version": "1.0.0",
+  "description": "h5项目结构总结",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node build/build.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Jason618/JasonDemo.git"
+  },
+  "keywords": [
+    "h5",
+    "node",
+    "vue",
+    "commonjs",
+    "module",
+    "webpack",
+    "best",
+    "practise"
+  ],
+  "author": "Jason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jason618/JasonDemo/issues"
+  },
+  "homepage": "https://github.com/Jason618/JasonDemo#readme"
+}

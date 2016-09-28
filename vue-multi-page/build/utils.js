@@ -1,6 +1,8 @@
+// node 原生path模块
 var path = require('path')
+// glob模块，用于读取webpack入口目录文件
+var glob = require('glob');
 var config = require('../config')
-var glob = require('glob')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 exports.assetsPath = function (_path) {
@@ -33,7 +35,6 @@ exports.cssLoaders = function (options) {
     }
   }
 
-  // http://vuejs.github.io/vue-loader/configurations/extract-css.html
   return {
     css: generateLoaders(['css']),
     postcss: generateLoaders(['css']),
@@ -45,7 +46,6 @@ exports.cssLoaders = function (options) {
   }
 }
 
-// Generate loaders for standalone style files (outside of .vue)
 exports.styleLoaders = function (options) {
   var output = []
   var loaders = exports.cssLoaders(options)
@@ -59,13 +59,11 @@ exports.styleLoaders = function (options) {
   return output
 }
 
-
 exports.getEntries = function (globPath) {
   var entries = {}
   /**
    * 读取src目录,并进行路径裁剪
    */
-  debugger;
   glob.sync(globPath).forEach(function (entry) {
     /**
      * path.basename 提取出用 ‘/' 隔开的path的最后一部分，除第一个参数外其余是需要过滤的字符串

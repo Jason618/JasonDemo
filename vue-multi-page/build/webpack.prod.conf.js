@@ -17,8 +17,8 @@ module.exports = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
-    filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+    filename: utils.assetsPath('js/[name]/[name].[hash:6].js'),
+    chunkFilename: utils.assetsPath('js/[name]/[id].[hash:6].js')
   },
   vue: {
     loaders: utils.cssLoaders({
@@ -37,7 +37,7 @@ module.exports = merge(baseWebpackConfig, {
     }),
     new webpack.optimize.OccurenceOrderPlugin(),
     // extract css into its own file
-    new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css')),
+    new ExtractTextPlugin(utils.assetsPath('css/[name]/[name].[hash:6].css')),
     // 公共模块的提取
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor', // 生成文件的名字
@@ -79,11 +79,12 @@ if (config.build.productionGzip) {
   )
 }
 
-var pages = utils.getEntries('./src/module/**/*.html')
+var pages = utils.getEntries('./src/views/**/*.html')
 for(var page in pages) {
-  // 配置生成的html文件，定义路径等
+  // 配置生成的html文件，定义路径等      static/views/module/index.html
+  console.info('page:'+ page);
   var conf = {
-    filename: page + '.html',
+    filename: config.build.assetsSubDirectory+ '/views/' + page + '/index.html',
     template: pages[page], //模板路径
     inject: true,
     // excludeChunks 允许跳过某些chunks, 而chunks告诉插件要引用entry里面的哪几个入口

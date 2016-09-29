@@ -1,3 +1,6 @@
+/**
+ * Created by lichengjun.
+ */
 import Vue from 'vue'
 import App from './App'
 

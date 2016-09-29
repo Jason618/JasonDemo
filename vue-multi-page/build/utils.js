@@ -77,6 +77,10 @@ exports.getEntries = function (globPath) {
     var tmp = entry.split('/').splice(-3)
     var moduleName = tmp.slice(1, 2);
     // ***************end***************
+    //获取模块的相对路径
+    //path.dirname(path);   path.dirname('./src/module/index/main.js')  //  ./src/module/index
+    //var moduleName = path.dirname(entry);
+    console.info('moduleName:'+moduleName + "===" + entry);
     entries[moduleName] = entry
   });
   // console.log(entries);

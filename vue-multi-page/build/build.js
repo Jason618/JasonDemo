@@ -30,6 +30,6 @@ webpack(webpackConfig, function (err, stats) {
     modules: false,
     children: false,
     chunks: false,
-    chunkModules: false
+    chunkModules: true
   }) + '\n')
 })

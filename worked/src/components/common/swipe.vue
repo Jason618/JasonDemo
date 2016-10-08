@@ -459,29 +459,29 @@
       var element = this.$el;
 
       element.addEventListener('touchstart', function (event) {
-        if (this.prevent) {
+        if (that.prevent) {
           event.preventDefault();
         }
-        if (this.animating) return;
-        this.dragging = true;
-        this.userScrolling = false;
-        this.doOnTouchStart(event);
+        if (that.animating) return;
+        that.dragging = true;
+        that.userScrolling = false;
+        that.doOnTouchStart(event);
       });
 
       element.addEventListener('touchmove', function (event) {
-        if (!this.dragging) return;
-        this.doOnTouchMove(event);
+        if (!that.dragging) return;
+        that.doOnTouchMove(event);
       });
 
       element.addEventListener('touchend', function (event) {
-        if (this.userScrolling) {
-          this.dragging = false;
-          this.dragState = {};
+        if (that.userScrolling) {
+          that.dragging = false;
+          that.dragState = {};
           return;
         }
-        if (!this.dragging) return;
-        this.doOnTouchEnd(event);
-        this.dragging = false;
+        if (!that.dragging) return;
+        that.doOnTouchEnd(event);
+        that.dragging = false;
       });
     }
   };

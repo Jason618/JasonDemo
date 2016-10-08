@@ -1,8 +1,10 @@
 <template>
-	<h1>This is Index module!</h1>
+	<h1>This is Index module! test</h1>
 </template>
 
-<script></script>
+<script>
+
+</script>
 
 <style scoped>
 	h1{

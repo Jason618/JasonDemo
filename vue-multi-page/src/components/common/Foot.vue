@@ -4,12 +4,6 @@
 </template>
 
 <script>
-  var eles = document.getElementsByTagName('h1');
-  console.info(eles);
-  for(var i=0;i<eles.length;i++) {
-    eles[i].style.fontSize = '30px';
-  }
-
 
 
 </script>

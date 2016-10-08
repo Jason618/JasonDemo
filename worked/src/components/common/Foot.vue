@@ -1,14 +1,21 @@
 <template>
-	<h1>This is Foot!</h1>
+  <footer>
+    <h3>this is site right</h3>
+    <p>jason@copy right</p>
+  </footer>
 </template>
 
-<script>
-  //document.write('this is foot');
-
-</script>
+<script></script>
 
 <style scoped>
-	h1{
-		color: green;
-	}
+	footer{
+    width: 100%;
+    text-align: center;
+  }
+  footer h3{
+
+  }
+  footer p{
+
+  }
 </style>

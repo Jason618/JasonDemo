@@ -1,25 +1,26 @@
 <template>
 	<vhead></vhead>
-	<vindex></vindex>
+	<vabout></vabout>
 	<vfoot></vfoot>
 </template>
 
 <script>
 import vhead from '../../components/common/Head'
 import vfoot from '../../components/common/Foot'
-import vindex from '../../components/index/Index'
+import vabout from '../../components/about/About'
 export default {
 	components: {
       // 可以以key-value的形式注册组件, 此时挂载点的名字就是key
       // 否则挂载点和组件名字一致, 即vhead
       vhead,
       vfoot,
-      vindex
+      vabout
     }
 }
 </script>
 
 <style>
-
-
+  @import "../../css/common/reset.css";
+  @import "../../css/common/layout.css";
+  @import "../../css/common/rem.css";
 </style>

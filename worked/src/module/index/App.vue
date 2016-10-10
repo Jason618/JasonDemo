@@ -4,6 +4,25 @@
            :my-done-btn-text='headerBtnText'></vhead>
     <div class="index_wrap content">
       <vslider v-bind:banners='indexBanner'></vslider>
+      <div class="topic clearfix">
+        <ul>
+          <li>
+            <a href='/flight.html'>机票</a>
+          </li>
+          <li>
+            <a href='/hotel.html'>酒店</a>
+          </li>
+          <li>
+            <a href='/tour.html'>景点</a>
+          </li>
+          <li>
+            <a href='/fjt.html'>自由行</a>
+          </li>
+          <li>
+            <a href='/ht.html'>酒景</a>
+          </li>
+        </ul>
+      </div>
       <vlist :items='indexListItems'></vlist>
     </div>
     <vfoot></vfoot>
@@ -167,4 +186,24 @@
   @import "../../css/common/layout.css";
   @import "../../css/common/rem.css";
   @import "../../css/common/global_1.css";
+  .topic{
+    margin: .2rem;
+  }
+  .topic li{
+    display: inline-block;
+    float: left;
+    width: 20%;
+  }
+  .topic li a{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1rem;
+    height: 1rem;
+    width: 1rem;
+    background-color: #4da7e7;
+    border-radius: 1rem;
+    color: #f5f4f9;
+    font-size: .28rem;
+  }
 </style>

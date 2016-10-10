@@ -8,7 +8,7 @@
     </li>
   </ul>
 </template>
-<style>
+<style scoped>
   ul {
     margin: .28rem;
   }

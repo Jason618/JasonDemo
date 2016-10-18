@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Basic Example</title>
+    <link rel="stylesheet" href="../../css/base.css"/>
+</head>
+<body>
+<div id="container">
+
+</div>
+<script src="../../lib/react.js"></script>
+<script src="../../lib/react-dom.js"></script>
+<!--<script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>-->
+<!--<script type="text/babel">-->
+    <!--ReactDOM.render(-->
+        <!--<h2>hello world </h2>,-->
+        <!--document.getElementById('container')-->
+    <!--);-->
+<!--</script>-->
+<script>
+    var hello = React.createClass({
+        displayName: 'Hello',
+        render : function(){
+            var div = React.createElement('div',null,'hello ',this.props.name);
+            return div;
+        }
+    });
+
+    ReactDOM.render(
+            React.createElement(hello,{name:'Jason'}),
+            document.getElementById('container')
+    );
+</script>
+</body>
+</html>

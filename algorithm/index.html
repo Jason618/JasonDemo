@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript/算法</title>
+</head>
+
+<body>
+<div>
+    <section>
+        <h1>线性查找</h1>
+        <p>时间复杂度O(n)</p>
+        <p>举例有10k个<strong>不重复的</strong>电话号码,需要查找其中一个</p>
+        <pre>
+            <code>
+                var allNum = [1,2,3,6,8,9,7,5];
+                var findNumber = function(all,one){
+                    for(var i=0;i<all.length;i++){
+                        if(all[i] === one){
+                            console.info('第' + i +'个数为查找对象');
+                            return all[i];
+                        }
+                    }
+                }
+                findNumber(allNum,5);
+            </code>
+        </pre>
+    </section>
+    <section>
+        <h1>冒泡排序</h1>
+        <p>时间复杂度O(n^2)</p>
+        <p>举例:任意个数从低到高排序</p>
+        <pre>
+            <code>
+                var allNum = [1,2,3,6,8,9,7,5];
+                var sort = function(nums){
+                    for(var i=0;i<nums.length;i++){
+                        for(var j=0;j<nums.length-i;j++){
+                            if(nums[j] > nums[j+1]){
+                                var temp = nums[j+1];
+                                nums[j+1] = nums[j];
+                                nums[j] = temp;
+                            }
+                        }
+                    }
+                    console.info(nums);
+                }
+                sort(allNum);
+            </code>
+        </pre>
+    </section>
+    <section>
+        <h1>二分查找</h1>
+        <p>时间复杂度O(logN)</p>
+        <p>举例:适用于已经排好顺序的情况</p>
+        <pre>
+            <code>
+                var allNum = [1,2,3,4,5,6,7];
+                var sort = function(nums,one){
+                    var len = nums.length;
+                    var middle = Math.round(len/2);
+                    if(one > nums[middle]){
+                        for(var i=middle;i<len;i++){
+                            if(nums[i] === one){
+                                console.info("第" + i +"个数");
+                                return nums[i];
+                            }
+                        }
+                    }else{
+                        for(var i=0;i<middle;i++){
+                            if(nums[i] === one){
+                                console.info("第" + i +"个数");
+                                return nums[i];
+                            }
+                        }
+                    }
+                }
+                sort(allNum,7);
+            </code>
+            <code>
+                var allNum = [1,2,3,4,5,6,7];
+                var sort = function(nums,one){
+                    var low = 0, height = nums.length -1;
+                    while(low <= height){
+                        debugger;
+                        var mid = Math.floor((low + height)/2);
+                        if(one === nums[mid]){
+                            console.info("第" + mid +"个数");
+                            return nums[mid];
+                        }
+                        if(one > nums[mid]){
+                            low = mid + 1;
+                        }
+                        if(one < nums[mid]){
+                            height = mid-1;
+                        }
+                    }
+                }
+                sort(allNum,7);
+
+            </code>
+        </pre>
+    </section>
+</div>
+
+</body>
+</html>

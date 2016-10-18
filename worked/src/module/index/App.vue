@@ -181,7 +181,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   @import "../../css/common/reset.css";
   @import "../../css/common/layout.css";
   @import "../../css/common/rem.css";

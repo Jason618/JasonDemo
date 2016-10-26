@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Flash Cast and Crew</title>
+    <link href="css/lib/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/lib/global.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="main">
+    <section class="question1">
+        <input type="text" placeholder="请输入年月日,例如：2016-01-10" style="width: 300px"/>
+        <button>确 定</button>
+    </section>
+    <h1 class="title">
+        The Flash Cast And Crew
+    </h1>
+    <div class="content">
+        <ul class="cast-list" id="castList">
+        </ul>
+        <div class="loading"></div>
+        <script type="text/template" id="castItemTpl">
+            <% _.each(data,function(item){ %>
+            <li class="cast">
+                <a class="" href="#" title="<%= item.name %>">
+                    <img src="img/<%= item.img %>"
+                         alt="cast"/>
+                    <div class="desc">
+                        <h2 class="name"><%= item.name %></h2>
+                        <p class="info"><%= item.bio %></p>
+                    </div>
+                </a>
+            </li>
+            <% }); %>
+        </script>
+    </div>
+
+</div>
+
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/underscore-min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

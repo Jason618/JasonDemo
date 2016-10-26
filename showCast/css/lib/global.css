@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.disabled {
+    display: none;
+}
+.hidden{
+    display: none !important;
+}
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix {
+    overflow: hidden;
+    _height: 1%;
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    zoom: 1;
+}
+a{
+    color: #999;
+    text-decoration: none;
+}
+a:active{
+
+}
+a:visited{
+
+}
+a:hover{
+
+}

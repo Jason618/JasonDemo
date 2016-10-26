@@ -1,0 +1,20 @@
+{
+  "name": "react-demo",
+  "version": "1.0.0",
+  "description": "react demo by myself",
+  "main": "index.js",
+  "scripts": {
+    "test": "node dev-server.js"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Jason",
+  "license": "ISC",
+  "devDependencies": {
+    "react": "^0.14.8",
+    "react-route": "^1.0.3",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
+}

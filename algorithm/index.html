@@ -82,7 +82,6 @@
                 var sort = function(nums,one){
                     var low = 0, height = nums.length -1;
                     while(low <= height){
-                        debugger;
                         var mid = Math.floor((low + height)/2);
                         if(one === nums[mid]){
                             console.info("第" + mid +"个数");
@@ -100,6 +99,59 @@
 
             </code>
         </pre>
+    </section>
+    <section>
+        <h2>快速排序</h2>
+        <p>时间复杂度O(nlog(n))</p>
+        <code>
+            var allNum = [2,3,422,3,345,1,21,1,2232,111,2,55,676];
+            var quickSort = function(arr){
+                var len = arr.length;
+                var mid = Math.floor(len/2);
+                var midArr = arr[mid];
+                if(len<3){
+                    return arr;
+                }
+
+                var smallArr = [],bigArr = [];
+                for(var i=0,cur;i<len;i++){
+                    cur = arr[i];
+                    if(cur === midArr){
+                        continue;
+                    }
+
+                    cur < midArr ? smallArr.push(cur) : bigArr.push(cur);
+                }
+                smallArr.push(midArr);
+                return quickSort(smallArr).concat(quickSort(bigArr));
+            }
+            quickSort(allNum);
+        </code>
+        <h3>倒序</h3>
+        <code>
+            var allNum = [2,3,422,3,345,1,21,1,2232,111,2,55,676];
+            var quickSort = function(arr){
+            var len = arr.length;
+            var mid = Math.floor(len/2);
+            var midArr = arr[mid];
+            if(len<3){
+            return arr;
+            }
+
+            var smallArr = [],bigArr = [];
+            for(var i=0,cur;i<len;i++){
+            cur = arr[i];
+            if(cur === midArr){
+            continue;
+            }
+
+            cur > midArr ? smallArr.push(cur) : bigArr.push(cur);
+            }
+            smallArr.push(midArr);
+            return quickSort(smallArr).concat(quickSort(bigArr));
+            }
+            quickSort(allNum);
+        </code>
     </section>
 </div>
 

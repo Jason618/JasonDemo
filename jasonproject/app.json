@@ -1,0 +1,16 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/category/index",
+    "pages/categorylist/index",
+    "pages/cart/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Jason Project",
+    "navigationBarTextStyle":"black"
+  }
+}

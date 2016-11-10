@@ -40,9 +40,9 @@
     </section>
 </div>
 <!--<script src="lib/vue.common.js"></script>-->
-<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+<script src="lib/vue.js"></script>
 <script>
-    new Vue({
+ var vm = new Vue({
         el: '#demo1',
         data: {
             message: 'Hello Vue.js!'
@@ -70,7 +70,7 @@
             ]
         }
     });
-    new Vue({
+  var vm3 =  new Vue({
         el: '#demo3',
         data: {
             newMessage: "",

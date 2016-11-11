@@ -21,6 +21,14 @@ Page({
       that.setData({
         userInfo:userInfo
       })
-    })
+    });
+
+    //发送请求 获取数据
+    app.getData({
+      url: 'http://127.0.0.1:3000/api/index/',
+      success:function(res){
+        console.info(res);
+      }
+    });
   }
 })

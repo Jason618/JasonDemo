@@ -24,6 +24,32 @@ App({
       })
     }
   },
+  getData:function(obj){
+    wx.request({
+      url: obj.url,
+      data: obj.data || {},
+      method: obj.method || 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function(res){
+        // success
+        if(typeof obj.success == 'function'){
+          obj.success(res);
+        }
+      },
+      fail: function() {
+        // fail
+        if(typeof obj.fail == 'function'){
+          obj.fail();
+        }
+      },
+      complete: function() {
+        // complete
+        if(typeof obj.complete == 'function'){
+          obj.complete();
+        }
+      }
+    })
+  },
   globalData:{
     userInfo:null
   }

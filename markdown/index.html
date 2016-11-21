@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>markdown语法说明</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
     <style>
-        .main{
+        .main {
             margin: 1em auto;
             max-width: 60em;
         }
-        .content .header{
+        
+        .content .header {
             text-align: center;
         }
-        .content form textarea{
+        
+        .content form textarea {
             width: 100%;
             min-height: 30em;
             padding: 1em;
         }
-        pre{
+        
+        pre {
             display: block;
             padding: 9.5px;
             margin: 0 0 10px;
@@ -30,12 +34,13 @@
             white-space: pre-wrap;
             background-color: #f5f5f5;
             border: 1px solid #ccc;
-            border: 1px solid rgba(0,0,0,0.15);
+            border: 1px solid rgba(0, 0, 0, 0.15);
             -webkit-border-radius: 4px;
             -moz-border-radius: 4px;
             border-radius: 4px;
         }
-        code{
+        
+        code {
             padding: 2px 4px;
             color: #d14;
             background-color: #f7f7f9;
@@ -45,6 +50,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="main pure-g">
         <header></header>
@@ -52,6 +58,34 @@
             <h1 class="header"><strong>Markdonw</strong>语法说明</h1>
             <form method="post" action="index.html">
                 <textarea id="text-input" oninput="this.editor.update()">
+                    #Type **Markdown** here. #CSS display inline-block 3px（标题） ###在写页面和布局样式的时候，这样的场景可能会经常出现，两个span标签，display属性值为inline-block,然后神奇的3px间隙出现啦。（简介） ####正文开始）首先我们来看看我们的html和css是怎么写的。 ####HTML:
+
+                    <div class='wrap'>
+                        <span class='left'></span>
+                        <span class='right'><span>
+    </div>
+
+####CSS
+
+    .wrap{}
+    .left,.right{display:inline-block;width:50%;height:40px;}
+    .left{background-color: blue;}
+    .right{background-color: green;}
+
+####显示效果如下：
+
+![Alt text](https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png "Optional title")
+
+####原因分析
+####解决办法
+####参考文献
+
+* [an example](http://baidu.com/ 'title')
+* [an example](http://baidu.com/ 'title')
+* <http://baidu.com>
+* <http://baidu.com>
+
+####其他
 #Type **Markdown** here.
 #标题
 #hello input

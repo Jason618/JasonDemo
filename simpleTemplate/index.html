@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>simple template</title>
+</head>
+
+<body>
+    <ul id="listWrap">
+
+    </ul>
+    <script type="text/template" id="template">
+        <li class="item">
+            <a href="#">{{ name }}</a>
+        </li>
+    </script>
+
+    <script src="js/zepto.js"></script>
+    <script type="text/javascript">
+        var data = [{
+            id: "1",
+            name: "test"
+        }, {
+            id: "2",
+            name: "jason"
+        }];
+
+        var html = $("#template").template(data);
+        $('#listWrap').html(html);
+    </script>
+</body>
+
+</html>

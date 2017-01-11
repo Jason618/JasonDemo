@@ -12,3 +12,6 @@ some  demo code
 
 >css命名规范
 >>>BEM(block,element,modifier)
+
+>调试   deltool: #source-map  or #evel-source-map
+>common.js   common.css      CommonsChunkPlugin

@@ -26,6 +26,7 @@
       <vlist :items='indexListItems'></vlist>
     </div>
     <vfoot></vfoot>
+    <vloading></vloading>
   </div>
 </template>
 
@@ -34,13 +35,14 @@
   import vfoot from '../../components/common/Foot'
   import vslider from '../../components/common/slider'
   import vlist from '../../components/index/index-list'
+  import vloading from '../../components/common/loading'
   export default {
     data: function () {
       return {
         headerTitle: '首页',
         headerBackBtn: true, //true,显示返回按钮
         headerDoneBtn: true,
-        headerBtnText: '完成',
+        headerBtnText: 'test',
         indexListItems: [
           {
             href: 'http://baidu.com',
@@ -153,17 +155,17 @@
         ],
         indexBanner: [
           {
-            imageSrc: 'http://res.yazhoulvyou.cn/pic/appbanner.jpg',
+            imageSrc: 'http://gw.alicdn.com/imgextra/i1/107/TB2abP8ctRopuFjSZFtXXcanpXa_!!107-0-yamato.jpg_760x760Q30s0.jpg_.webp',
+            link: '/hotel.html',
+            alt: 'banner1'
+          },
+          {
+            imageSrc: 'http://gw.alicdn.com/imgextra/i1/107/TB2abP8ctRopuFjSZFtXXcanpXa_!!107-0-yamato.jpg_760x760Q30s0.jpg_.webp',
             link: 'http://baidu.com',
             alt: 'banner1'
           },
           {
-            imageSrc: 'http://res.yazhoulvyou.cn/pic/appbanner.jpg',
-            link: 'http://baidu.com',
-            alt: 'banner1'
-          },
-          {
-            imageSrc: 'http://res.yazhoulvyou.cn/pic/appbanner.jpg',
+            imageSrc: 'http://gw.alicdn.com/imgextra/i1/107/TB2abP8ctRopuFjSZFtXXcanpXa_!!107-0-yamato.jpg_760x760Q30s0.jpg_.webp',
             link: 'http://baidu.com',
             alt: 'banner1'
           }
@@ -173,6 +175,7 @@
     components: {
       // 可以以key-value的形式注册组件, 此时挂载点的名字就是key
       // 否则挂载点和组件名字一致, 即vhead
+      vloading,
       vhead,
       vfoot,
       vlist,

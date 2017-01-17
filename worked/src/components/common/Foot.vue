@@ -8,14 +8,13 @@
 <script></script>
 
 <style scoped>
-	footer{
-    width: 100%;
-    text-align: center;
-  }
-  footer h3{
+    footer {
+        width: 100%;
+        text-align: center;
+    }
+    
+    footer h3 {}
+    
+    footer p {}
 
-  }
-  footer p{
-
-  }
 </style>
